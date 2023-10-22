@@ -2,7 +2,7 @@
 FROM node:14 as builder
 
 
-WORKDIR /src/app
+WORKDIR /app
 
 COPY package*.json ./
 
