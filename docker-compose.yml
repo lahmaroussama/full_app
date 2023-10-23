@@ -4,7 +4,7 @@ services:
     image: mysql:latest
     container_name: docker-compose-mysql-db
     ports:
-      - "3306:3306"
+      - "3307:3306"
     environment:
       - MYSQL_ROOT_PASSWORD=root
       - MYSQL_DATABASE=achatdb
@@ -15,7 +15,7 @@ services:
     image: ikbel436/achat
     container_name: docker-compose-spring-boot
     ports:
-      - "8080:8080"
+      - "8089:8080"
     depends_on:
       - mysql-db
     environment:
