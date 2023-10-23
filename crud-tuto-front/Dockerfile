@@ -1,19 +1,22 @@
 
-FROM node:14
-
-WORKDIR /usr/src/app
+FROM node:latest as build
 
 
-COPY package*.json ./
+WORKDIR /usr/local/app
+
+
+COPY ./ /usr/local/app/
+
 
 RUN npm install
 
 
-COPY . .
+RUN npm run build
 
+
+FROM nginx:latest
+
+
+COPY --from=build /usr/local/app/dist/crud-tuto-front /usr/share/nginx/html
 
 EXPOSE 80
-
-CMD ["npm", "start"]
-
-
