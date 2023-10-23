@@ -2,22 +2,25 @@
 FROM node:14 as builder
 
 
-WORKDIR /app
+WORKDIR /src/app
+
 
 COPY package*.json ./
 
 
 RUN npm install
 
+
 COPY . .
 
 
-RUN npm run build -- --prod
+RUN npm run build
 
 
+FROM nginx:latest
+
+
+COPY --from=builder /src/app/dist /usr/share/nginx/html
 
 
 EXPOSE 80
-
-
-CMD ["ng", "serve", "--host", "0.0.0.0"]
