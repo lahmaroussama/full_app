@@ -1,19 +1,10 @@
-# Étape 1 : Construction de l'application Angular
-FROM node:14.18.1 AS build
+# stage 1
+FROM node:14.21.3-alpine as node
+WORKDIR /app
+COPY . .
+RUN npm install
+RUN npm run build --prod
 
-WORKDIR /usr/local/app
-
-COPY ./ /usr/local/app/
-
-RUN npm cache clean --force
-RUN npm install --legacy-peer-deps
-RUN npm run build
-
-# Étape 2 : Configuration du serveur Nginx
-FROM nginx:latest
-
-# Copiez les fichiers construits de l'étape de construction précédente
-COPY --from=build /usr/local/app/dist/crud-tuto-front /usr/share/nginx/html
-
-# Exposez le port 80 pour le serveur Nginx
-EXPOSE 80
+# stage 2
+FROM nginx:alpine
+COPY --from=node /app/dist/crudtuto-Front /usr/share/nginx/html
