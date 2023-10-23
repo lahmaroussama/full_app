@@ -14,6 +14,8 @@ services:
     container_name: docker-compose-spring-boot-1
     ports:
       - "8089:8080"
+    depends_on:
+      - mysql-db
     environment:
       - SPRING_DATASOURCE_URL=jdbc:mysql://docker-compose-mysql-db-1:3306/achatdb?&createDatabaseIfNotExist=true&useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
       - SPRING_DATASOURCE_USERNAME=root
@@ -24,3 +26,5 @@ services:
     container_name: front_achat
     ports:
       - "4200:80"
+    depends_on:
+      - spring-boot-app
