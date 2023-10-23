@@ -13,7 +13,7 @@ RUN npm run build
 FROM nginx:alpine
 
 # Copiez les fichiers construits de l'étape de construction précédente
-COPY --from=build /usr/local/app/dist/crud-tuto-front /usr/share/nginx/html
+COPY --from=build /usr/local/app/dist/crudtuto-front /usr/share/nginx/html
 
 # Exposez le port 80 pour le serveur Nginx
 EXPOSE 80
