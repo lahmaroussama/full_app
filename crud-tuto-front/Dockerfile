@@ -1,9 +1,8 @@
 # Étape 1 : Construction de l'application Angular
 FROM node:14.18.1 AS build
 
-WORKDIR /usr/local/app
-
-COPY ./ /usr/local/app/
+WORKDIR /app
+COPY . .
 
 RUN npm cache clean --force
 RUN npm install --legacy-peer-deps
