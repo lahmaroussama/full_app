@@ -7,4 +7,5 @@ RUN npm run build --prod
 
 # stage 2
 FROM nginx:alpine
-COPY --from=node /app/dist/crud-tuto-front /usr/share/nginx/html
+COPY --from=build /usr/local/app/dist/crud-tuto-front /usr/share/nginx/html
+EXPOSE 80
