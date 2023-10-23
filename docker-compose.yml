@@ -12,7 +12,7 @@ services:
       - my-network
 
   spring-boot-app:
-    image: your-spring-boot-image
+    image: ikbel436/achat
     container_name: docker-compose-spring-boot
     ports:
       - "8080:8080"
@@ -26,7 +26,7 @@ services:
       - my-network
 
   angular-app:
-    image: your-angular-app-image
+    image: ikbel436/frontachat
     container_name: docker-compose-angular-app
     ports:
       - "4200:80"
