@@ -15,7 +15,7 @@ services:
     image: ikbel436/achat
     container_name: docker-compose-spring-boot
     ports:
-      - "8089:8080"
+      - "8088:8089"
     depends_on:
       - mysql-db
     environment:
@@ -24,7 +24,6 @@ services:
       - SPRING_DATASOURCE_PASSWORD=root
     networks:
       - my-network
-
   angular-app:
     image: ikbel436/frontachat
     container_name: docker-compose-angular-app
