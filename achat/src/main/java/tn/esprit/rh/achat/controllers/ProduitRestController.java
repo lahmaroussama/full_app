@@ -10,9 +10,10 @@ import java.util.List;
 
 
 @RestController
-@CrossOrigin("*")
+@CrossOrigin(origins = "http://192.168.1.103:4200")
 @Api(tags = "Gestion des produits")
 @RequestMapping("/produit")
+
 public class ProduitRestController {
 
 	@Autowired
