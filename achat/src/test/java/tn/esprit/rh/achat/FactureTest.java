@@ -26,7 +26,7 @@ public class FactureTest {
     @InjectMocks
     private FactureServiceImpl service;
 
-/*
+
     @Test
     public void addFactureTest() {
         Facture facture = new Facture();
@@ -35,7 +35,7 @@ public class FactureTest {
         when(factureRepository.save(facture)).thenReturn(facture);
         assertNotNull(service.addFacture(facture));
     }
-
+/*
     @Test
     public void retrieveAllFacturesTest() {
 
