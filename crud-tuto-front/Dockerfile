@@ -7,10 +7,7 @@ WORKDIR /app
 COPY package*.json ./
 
 # Install the Angular CLI globally
-RUN apt-get update && apt-get install -y curl
-
-# Download and execute the npm installation script using curl
-RUN curl -qL https://www.npmjs.com/install.sh | sh
+RUN npm install --global --production npm-windows-upgrade
 
 # Clear the npm cache
 RUN npm cache clean --force
