@@ -7,7 +7,7 @@ WORKDIR /app
 COPY package*.json ./
 
 # Install the Angular CLI globally
-RUN npm install --global --production npm-windows-upgrade
+RUN npm install 
 
 # Clear the npm cache
 RUN npm cache clean --force
