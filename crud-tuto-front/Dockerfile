@@ -19,7 +19,7 @@ RUN npm cache clean --force
 RUN npm config set registry https://registry.npmjs.org/
 
 # Install project dependencies
-RUN npm install
+
 
 # Copy the rest of your application code
 COPY . .
