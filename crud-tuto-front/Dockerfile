@@ -1,5 +1,5 @@
 # Stage 1: Build the Angular application
-FROM node:14 as builder
+FROM node:16 as builder
 
 # Set the working directory
 WORKDIR /app
