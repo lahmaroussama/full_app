@@ -1,7 +1,7 @@
 FROM node as build
 WORKDIR /app
 COPY package.json ./
-RUN npm install --force
+RUN npm install -g npm@10.2.3
 COPY . ./
 RUN npm run build
 
