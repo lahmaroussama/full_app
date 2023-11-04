@@ -7,5 +7,5 @@ RUN npm run build
 
 # stage 2
 FROM nginx:stable-alpine
-COPY --from=build /app/build /usr/share/nginx/html
+COPY --from=NODE /app/build /usr/share/nginx/html
 EXPOSE 80
