@@ -1,7 +1,7 @@
-FROM node as build
+FROM node:14.21.3-alpine as node
 WORKDIR /app
 COPY package.json ./
-RUN npm install -g npm@10.2.3
+RUN npm install
 COPY . ./
 RUN npm run build
 
