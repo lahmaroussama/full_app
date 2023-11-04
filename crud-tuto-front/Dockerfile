@@ -1,11 +1,12 @@
-FROM node:14.21.3-alpine as node
+FROM node as build
 WORKDIR /app
 COPY package.json ./
 RUN npm install
 COPY . ./
 RUN npm run build
 
-# stage 2
+# production environment
 FROM nginx:stable-alpine
-COPY --from=NODE /app/build /usr/share/nginx/html
+COPY --from=build /app/build /usr/share/nginx/html
 EXPOSE 80
+CMD ["nginx", "-g", "daemon off;"]
