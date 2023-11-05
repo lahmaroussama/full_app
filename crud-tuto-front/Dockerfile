@@ -1,6 +1,7 @@
 FROM node:14.21.3-alpine as node
 WORKDIR /app
 COPY . .
+RUN npm cache verify
 RUN npm install
 RUN npm run build --prod
 
