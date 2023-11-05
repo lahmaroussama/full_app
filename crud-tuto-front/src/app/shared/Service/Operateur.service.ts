@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class OperateurService {
-  readonly API_URL = 'http://192.168.1.103:8088/SpringMVC/operateur';
+  readonly API_URL = 'http://192.168.125.160:8088/SpringMVC/operateur';
 
   constructor(private httpClient: HttpClient) { }
 
