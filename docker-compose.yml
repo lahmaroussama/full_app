@@ -25,7 +25,7 @@ services:
     networks:
       - my-network
   angular-app:
-    image: oussama/frontachat
+    image: oussama00001/frontachat
     container_name: app-front
     ports:
       - "4200:80"
