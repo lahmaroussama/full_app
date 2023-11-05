@@ -23,6 +23,19 @@
 <name>deploymentRepo</name>
 <url>http://localhost:8081/repository/maven-releases/</url>
 </repository>
+
+		<repositories>
+    <repository>
+        <id>central</id>
+        <url>https://repo.maven.apache.org/maven2</url>
+    </repository>
+    <!-- Add MySQL Repository -->
+    <repository>
+        <id>mysql-connector-java</id>
+        <url>https://mvnrepository.com/artifact/mysql/mysql-connector-java</url>
+    </repository>
+</repositories>
+
 </distributionManagement>
 	<dependencies>
 		<dependency>
