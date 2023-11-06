@@ -10,7 +10,7 @@ services:
       - MYSQL_DATABASE=achatdb
     networks:
       - my-network
-# front
+
   spring-boot-app:
     image: anas07/achat
     container_name: docker-compose-spring-boot
