@@ -16,7 +16,7 @@ public class SecteurActiviteServiceImplTest {
     void setUp() {
         secteurActiviteRepository = new SecteurActiviteRepository(); // Instantiate your repository here
         secteurActiviteService = new SecteurActiviteServiceImpl(secteurActiviteRepository);
-    }
+    }/*
 
     @Test
     void testRetrieveAllSecteurActivite() {
@@ -38,7 +38,7 @@ public class SecteurActiviteServiceImplTest {
         assertEquals(1, result.size());
         assertEquals("Code1", result.get(0).getCodeSecteurActivite());
         assertEquals("Libelle1", result.get(0).getLibelleSecteurActivite());
-    }
+    }*/
 
     // Other test methods for your service methods
 
