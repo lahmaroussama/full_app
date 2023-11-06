@@ -18,19 +18,10 @@ public class OperateurServiceImplTest {
 
     @Autowired
     private OperateurServiceImpl operateurService;
-/*
-    @Test
-    public void testRetrieveOperateur() {
-        // Assuming an Operateur with ID 1 exists in the database
-        Long id = 2L;
 
-        Operateur operateur = operateurService.retrieveOperateur(id);
+    
 
-        assertNotNull(operateur);
-        assertEquals("Fakher", operateur.getNom()); // Adjust the expected values
-    }
 
-*/
     @Test
     public void testAddOperateur() {
         Operateur operateur = new Operateur();
@@ -44,7 +35,7 @@ public class OperateurServiceImplTest {
         assertEquals("John", addedOperateur.getNom());
         assertEquals("Doe", addedOperateur.getPrenom());
         assertEquals("password", addedOperateur.getPassword());
-    }/*
+    }
     @Test
     public void testUpdateOperateur() {
         Operateur operateur = new Operateur();
@@ -56,6 +47,16 @@ public class OperateurServiceImplTest {
         assertEquals("UpdatedName", updatedOperateur.getNom());
     }
     @Test
+    public void testRetrieveOperateur() {
+        // Assuming an Operateur with ID 1 exists in the database
+        Long id = 1L;
+
+        Operateur operateur = operateurService.retrieveOperateur(id);
+
+        assertNotNull(operateur);
+        assertEquals("Fakher", operateur.getNom()); // Adjust the expected values
+    }
+    @Test
     public void testDeleteOperateur() {
         // Assuming an Operateur with ID 1 exists in the database
         Long id = 1L;
@@ -63,7 +64,7 @@ public class OperateurServiceImplTest {
         operateurService.deleteOperateur(id);
 
         // Verify that the Operateur is deleted (you can use Mockito to verify the delete method was called)
-    }*/
+    }
     }
 
     // Write similar test methods for other service operations
