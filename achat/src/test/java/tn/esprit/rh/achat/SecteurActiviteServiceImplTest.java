@@ -9,38 +9,8 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class SecteurActiviteServiceImplTest {
 
-    private SecteurActiviteServiceImpl secteurActiviteService;
-    private SecteurActiviteRepository secteurActiviteRepository;
-
-    @BeforeEach
-    void setUp() {
-        secteurActiviteRepository = new SecteurActiviteRepository(); // Instantiate your repository here
-        secteurActiviteService = new SecteurActiviteServiceImpl(secteurActiviteRepository);
-    }/*
-
-    @Test
-    void testRetrieveAllSecteurActivite() {
-        // Create a sample list of SecteurActivite entities
-        List<SecteurActivite> secteurActiviteList = new ArrayList<>();
-        SecteurActivite secteurActivite1 = new SecteurActivite();
-        secteurActivite1.setIdSecteurActivite(1L);
-        secteurActivite1.setCodeSecteurActivite("Code1");
-        secteurActivite1.setLibelleSecteurActivite("Libelle1");
-        secteurActiviteList.add(secteurActivite1);
-
-        // Mock the repository to return the sample list
-        when(secteurActiviteRepository.findAll()).thenReturn(secteurActiviteList);
-
-        // Test the service method
-        List<SecteurActivite> result = secteurActiviteService.retrieveAllSecteurActivite();
-
-        // Assert the result
-        assertEquals(1, result.size());
-        assertEquals("Code1", result.get(0).getCodeSecteurActivite());
-        assertEquals("Libelle1", result.get(0).getLibelleSecteurActivite());
-    }*/
-
-    // Other test methods for your service methods
+    public SecteurActiviteServiceImpl secteurActiviteService;
+    public SecteurActiviteRepository secteurActiviteRepository;
 
     @Test
     void testAddSecteurActivite() {
@@ -58,7 +28,5 @@ public class SecteurActiviteServiceImplTest {
         assertEquals("Code1", result.getCodeSecteurActivite());
         assertEquals("Libelle1", result.getLibelleSecteurActivite());
     }
-
-    // Other test methods for your service methods
 
 }
