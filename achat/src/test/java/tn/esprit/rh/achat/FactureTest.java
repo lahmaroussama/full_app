@@ -28,7 +28,7 @@ public class FactureTest {
     private FactureServiceImpl service;
 
 
- /*   @Test
+    @Test
     public void addFactureTest() {
         Facture facture = new Facture();
 
@@ -36,7 +36,7 @@ public class FactureTest {
         when(factureRepository.save(facture)).thenReturn(facture);
         assertNotNull(service.addFacture(facture));
     }
-*/
+
     @Test
     public void retrieveAllFacturesTest() {
 
@@ -49,7 +49,7 @@ public class FactureTest {
         List<Facture> retrievedFactures = service.retrieveAllFactures();
         assertEquals(factures, retrievedFactures);
     }
-/*
+
     @Test
     public void testCancelFacture() {
         Long factureId = 1L;
@@ -71,5 +71,5 @@ public class FactureTest {
         when(factureRepository.findById(1L)).thenReturn(java.util.Optional.of(expectedFacture));
         Facture retrievedFacture = service.retrieveFacture(1L);
         assertEquals(expectedFacture, retrievedFacture);
-    }*/
+    }
 }
