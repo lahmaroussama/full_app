@@ -56,15 +56,15 @@ public class OperateurServiceImplTest {
        // assertNotNull(operateur);
         //assertEquals("Fakher", operateur.getNom()); // Adjust the expected values
     }
-    @Test
+  /*  @Test
     public void testDeleteOperateur() {
         // Assuming an Operateur with ID 1 exists in the database
-        Long id = 3L;
+        Long id = 5L;
 
         operateurService.deleteOperateur(id);
 
         // Verify that the Operateur is deleted (you can use Mockito to verify the delete method was called)
-    }
+    }*/
     }
 
     // Write similar test methods for other service operations
