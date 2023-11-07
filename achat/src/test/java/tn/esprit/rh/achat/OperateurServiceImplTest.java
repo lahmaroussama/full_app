@@ -44,7 +44,7 @@ public class OperateurServiceImplTest {
 
         Operateur updatedOperateur = operateurService.updateOperateur(operateur);
 
-        assertEquals("UpdatedName", updatedOperateur.getNom());
+        assertEquals("Fakher", updatedOperateur.getNom());
     }
     @Test
     public void testRetrieveOperateur() {
