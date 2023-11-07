@@ -59,7 +59,7 @@ public class OperateurServiceImplTest {
     @Test
     public void testDeleteOperateur() {
         // Assuming an Operateur with ID 1 exists in the database
-        Long id = 2L;
+        Long id = 1L;
 
         operateurService.deleteOperateur(id);
 
