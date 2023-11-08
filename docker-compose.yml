@@ -8,6 +8,7 @@ services:
     environment:
       - MYSQL_ROOT_PASSWORD=
       - MYSQL_DATABASE=achatdb
+      - MYSQL_INIT_DELAY=30
     networks:
       - my-network
 
